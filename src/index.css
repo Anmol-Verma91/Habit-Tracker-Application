@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* General Styles for Input and Button */
+.input-container {
+  margin: 20px 0;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+  display: block;
+}
+
+.input-button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+button.add-btn {
+  padding: 12px 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.remove-btn {
+  padding: 12px 10px;
+  margin-left: 6px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.add-btn:hover {
+  background-color: #005f56;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #00796b;
+}
+
+/* Habit Cards */
+.habit-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.habit-card {
+  background-color: white;
+  width: calc(33% - 20px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.habit-card h2 {
+  font-size: 20px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.day-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.day-completed {
+  background-color: #4caf50;
+  padding: 10px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.day-incomplete {
+  background-color: #e0e0e0;
+  color: #555;
+  padding: 10px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.habit-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+/* Weekyhabits page css */
+
+.weeklydata-list {
+  width: 90%;
+  min-height: 0px;
+  margin: auto;
+}
+
+.weeklydata{
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  
+}
+
+/* Responsive Design */
+
+@media (max-width: 1025px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .habit-card {
+    width: calc(50% - 20px);
+  }
+
+  .input-button-wrapper {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button.add-btn {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  button.remove-btn {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+}
+
+/* Small Devices */
+
+@media (max-width: 682px) {
+  .habit-card {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .progress-bar-container {
+    height: 8px;
+  }
+
+  .day-tracker button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .habit-card h2 {
+    font-size: 18px;
+  }
+
+  .habit-card p {
+    font-size: 12px;
+  }
+
+  input[type="text"] {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  button.add-btn {
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  button.remove-btn {
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+}
